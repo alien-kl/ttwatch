@@ -37,6 +37,7 @@ find_package(OpenSSL)
 find_package(LibUSB)
 
 pkg_check_modules(LIBPROTOBUFC libprotobuf-c)
+set (LIBPROTOBUFC_LIBRARIES protobuf-c)
 
 include_directories(${LIBUSB_1_INCLUDE_DIRS} ${OPENSSL_INCLUDE_DIR} ${CURL_INCLUDE_DIRS} ${LIBPROTOBUFC_INCLUDE_DIRS})
 link_directories(${LIBUSB_1_LIBRARY_DIRS} ${OPENSSL_LIBRARY_DIR} ${CURL_LIBRARY_DIRS} ${LIBPROTOBUFC_LIBRARY_DIRS})
